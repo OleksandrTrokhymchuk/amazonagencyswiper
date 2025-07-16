@@ -14,7 +14,7 @@ import Image from "next/image"
 export default function MainSwiper() {
     return(
         <> 
-            <h3>Voices of Success with Sales Fortuna</h3>
+            <h1>Voices of Success with Sales Fortuna</h1>
             <Swiper
               modules={[Navigation, Pagination, A11y]}
               slidesPerView={3} 
