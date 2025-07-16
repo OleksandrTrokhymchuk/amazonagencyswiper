@@ -10,3 +10,27 @@
 body {
   font-family: var(--font-space-grotesk), sans-serif;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply hidden !important; 
+}
+
+.swiper-pagination {
+  @apply relative; 
+  @apply mt-8;     
+  @apply w-full;   
+  @apply flex;     
+  @apply justify-center; 
+}
+
+.swiper-pagination-bullet {
+  @apply bg-gray-400; 
+  @apply w-3 h-3;      
+  @apply mx-3;         
+  @apply transition-colors duration-300; 
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-[#4b4b4b];
+}
