@@ -12,7 +12,11 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-space-grotesk)', 'sans-serif'],
         staatliches: ['var(--font-staatliches)', 'sans-serif'],
+        spinnaker: ['var(--font-spinnaker)', 'sans-serif'],
       },
+      rotate: {
+        '270': '270deg',
+      }
     },
   },
   plugins: [],
