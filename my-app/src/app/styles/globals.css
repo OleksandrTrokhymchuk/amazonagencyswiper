@@ -4,3 +4,7 @@
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
+
+body {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
