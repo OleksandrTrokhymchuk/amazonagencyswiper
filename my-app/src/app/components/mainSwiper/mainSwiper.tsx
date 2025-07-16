@@ -23,36 +23,21 @@ export default function MainSwiper() {
             >
                 <SwiperSlide>
                     <Image src={SereneLivingLogoImg} alt="Serene Living Logo"/>
-                    <Image src={EthanMorganProfileImg} alt="Ethan Morgan Profile Picture"/>
-                    
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image src={StarlightCreationsLogoImg} alt="Starlight Creations Logo"/>
-                    <Image src={OliviaHayesImg} alt="Olivia Hayes Profile Picture"/>
-
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image src={OpulentLivingGroupLogoImg} alt="Opulent Living Group Logo"/>
-                    <Image src={AlexandrReedProfileImg} alt="Alexandr Reed Profile Picture"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image src={SereneLivingLogoImg} alt="Serene Living Logo"/>
-                    <Image src={EthanMorganProfileImg} alt="Ethan Morgan Profile Picture"/>
-                    
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image src={StarlightCreationsLogoImg} alt="Starlight Creations Logo"/>
-                    <Image src={OliviaHayesImg} alt="Olivia Hayes Profile Picture"/>
-
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Image src={OpulentLivingGroupLogoImg} alt="Opulent Living Group Logo"/>
-                    <Image src={AlexandrReedProfileImg} alt="Alexandr Reed Profile Picture"/>
+                    <blockquote>
+                        <p>
+                            Sales Fortuna made managing sales easier and helped us focus on customers. Its tools have been crucial for our growth and client satisfaction.
+                        </p>
+                        <span>“</span>
+                        <footer>
+                            <cite>
+                                <Image src={EthanMorganProfileImg} alt="Ethan Morgan Profile Picture"/>
+                                <div>
+                                    Ethan Morgan
+                                    <span>Founter and CEO,<br />Serene Living Products</span>
+                                </div>
+                            </cite>
+                        </footer>
+                    </blockquote>
                 </SwiperSlide>
             </Swiper>
         </>
