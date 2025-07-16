@@ -2,11 +2,13 @@ import MainSwiper from "./components/mainSwiper/mainSwiper"
 
 export default function Home() {
   return (
-    <section
-        className="bg-no-repeat bg-bottom bg-cover h-[755px]"
-        style={{ backgroundImage: "url('/images/background.svg')" }}
-      >
-      <MainSwiper />
-    </section>
+    <main  className="bg-no-repeat bg-bottom bg-cover h-[755px]"
+          style={{ backgroundImage: "url('/images/background.svg')" }} >
+      <section
+         className="max-w-[1360px] mx-auto"
+          >
+        <MainSwiper/>
+      </section>
+    </main>
   )
 }

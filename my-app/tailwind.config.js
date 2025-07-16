@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-space-grotesk)', 'sans-serif'],
+        staatliches: ['var(--font-staatliches)', 'sans-serif'],
       },
     },
   },
