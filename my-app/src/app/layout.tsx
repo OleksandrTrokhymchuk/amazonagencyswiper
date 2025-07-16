@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
 import "./styles/globals.css"
+import { Space_Grotesk, Staatliches } from "next/font/google"
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['500', '700'], 
+  variable: '--font-space-grotesk',
+})
+
+const staatliches = Staatliches({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-staatliches',
+})
 
 export const metadata: Metadata = {
   title: "Next App",
@@ -13,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${spaceGrotesk.variable} ${staatliches.variable}`}>
         {children}
       </body>
     </html>
