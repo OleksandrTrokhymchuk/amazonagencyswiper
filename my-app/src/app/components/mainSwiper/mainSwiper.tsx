@@ -1,7 +1,7 @@
 "use client"
 
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, A11y } from 'swiper/modules'
+import { Navigation, Pagination, A11y, EffectFade } from 'swiper/modules'
 
 import SereneLivingLogoImg from "../../../../public/images/Serene_Living.svg"
 import StarlightCreationsLogoImg from "../../../../public/images/Starlight_Creations.svg"
@@ -10,12 +10,14 @@ import EthanMorganProfileImg from "../../../../public/images/Ethan_Morgan.svg"
 import OliviaHayesImg from "../../../../public/images/Olivia_Hayes.svg"
 import AlexandrReedProfileImg from "../../../../public/images/Alexandr_Reed.svg"
 import Image from "next/image"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import type { Swiper as SwiperRef } from 'swiper'
 
 export default function MainSwiper() {
 
     const swiperRef = useRef<SwiperRef | null>(null)
+    const [isBeginning, setIsBeginning] = useState<boolean>(true)
+    const [isEnd, setIsEnd] = useState<boolean>(false)
 
     const goNext = () => {
         if (swiperRef.current && swiperRef.current.slideNext) { 
@@ -39,8 +41,12 @@ export default function MainSwiper() {
             <div className="relative flex items-center justify-center">
                 <button
                     onClick={goPrev}
-                    className="w-[68px] h-[68px] absolute flex items-center justify-center border border-solid border-[#D1CFCF] left-[-96px] z-10 bg-white rounded-full text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
-                    aria-label="Previous slide"
+                    className={`w-[68px] h-[68px] absolute flex items-center justify-center 
+                        border border-solid border-[#D1CFCF] left-[-96px] z-10 
+                        bg-white rounded-full
+                        transition-all duration-500 ease-in-out hover:scale-110
+                        ${isBeginning && "opacity-55 pointer-events-none"}`}
+                        aria-label="Previous slide"
                 >
                     <span
                         className="h-[28px] w-[20px] font-spinnaker text-[#707070] text-5xl tranform rotate-270 translate-x-[-3px] translate-y-[2px]"
@@ -51,14 +57,20 @@ export default function MainSwiper() {
                 <Swiper
                     onSwiper={(swiper) => { 
                     swiperRef.current = swiper;
-                }}
-                    modules={[Navigation, Pagination, A11y]}
+                    
+                    }}
+                    modules={[Navigation, Pagination, A11y, EffectFade ]}
                     slidesPerView={3} 
                     spaceBetween={18}
+                    effect="slide"
+                    speed={1200}
                     navigation={true}
                     pagination={{ clickable: true }} 
                     scrollbar={{ draggable: true }}
-                    // className="w-full"
+                    onSlideChange={(swiper) => {
+                        setIsBeginning(swiper.isBeginning)
+                        setIsEnd(swiper.isEnd)
+                    }}
                 >
                     <SwiperSlide >
                         <div 
@@ -241,11 +253,15 @@ export default function MainSwiper() {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                  <button
-                        onClick={goNext}
-                        className="w-[68px] h-[68px] absolute flex items-center justify-center border border-solid border-[#D1CFCF] right-[-96px] z-10 bg-white rounded-full text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
-                        aria-label="Previous slide"
-                    >
+                <button
+                    onClick={goNext}
+                    className={`w-[68px] h-[68px] absolute flex items-center justify-center 
+                        border border-solid border-[#D1CFCF] right-[-96px] z-10 
+                        bg-white rounded-full
+                        transition-all duration-500 ease-in-out hover:scale-110
+                        ${isEnd && "opacity-55 pointer-events-none"}`}
+                        aria-label="Next slide"
+                >
                     <span
                         className="h-[28px] w-[20px] font-spinnaker text-[#707070] text-5xl tranform rotate-90 translate-x-[3px] translate-y-[-3px]"
                     >
