@@ -56,8 +56,7 @@ export default function MainSwiper() {
                 </button>
                 <Swiper
                     onSwiper={(swiper) => { 
-                    swiperRef.current = swiper;
-                    
+                        swiperRef.current = swiper
                     }}
                     modules={[Navigation, Pagination, A11y, EffectFade ]}
                     slidesPerView={3} 
@@ -77,9 +76,7 @@ export default function MainSwiper() {
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
                                 border border-[#B6B1B1] border-solid 
-                                pb-8 px-7 pt-[170px]
-
-                                "
+                                pb-8 px-7 pt-[170px]"
                         >
                             <blockquote>
                                 <p className="relative text-[#9B9A99] leading-[1.7] text-xl mb-10 ">

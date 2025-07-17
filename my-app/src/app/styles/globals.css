@@ -18,16 +18,16 @@ body {
 
 .swiper-pagination {
   @apply relative; 
-  @apply mt-8;     
+  @apply mt-12;     
   @apply w-full;   
   @apply flex;     
   @apply justify-center; 
+  @apply gap-3
 }
 
 .swiper-pagination-bullet {
-  @apply bg-gray-400; 
+  @apply bg-[#bcbbbb]; 
   @apply w-3 h-3;      
-  @apply mx-3;         
   @apply transition-colors duration-300; 
 }
 
