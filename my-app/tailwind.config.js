@@ -16,6 +16,15 @@ module.exports = {
       },
       rotate: {
         '270': '270deg',
+      },
+      screens: {
+        'vsm': '320px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        'desktop-xl': '1440px',
       }
     },
   },

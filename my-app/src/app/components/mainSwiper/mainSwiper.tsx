@@ -38,14 +38,16 @@ export default function MainSwiper() {
             >
                 Voices of Success with Sales Fortuna
             </h1>
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center lg:px-24">
                 <button
                     onClick={goPrev}
-                    className={`w-[68px] h-[68px] absolute flex items-center justify-center 
-                        border border-solid border-[#D1CFCF] left-[-96px] z-10 
+                    className={`w-[68px] h-[68px] absolute items-center justify-center 
+                        border border-solid border-[#D1CFCF] 2xl:left-[-96px] z-10 
                         bg-white rounded-full
                         transition-all duration-500 ease-in-out hover:scale-110
-                        ${isBeginning && "opacity-55 pointer-events-none"}`}
+                        hidden sm:flex sm:left-8 lg:left-4
+                        ${isBeginning && "opacity-55 pointer-events-none"}
+                        `}
                         aria-label="Previous slide"
                 >
                     <span
@@ -63,6 +65,18 @@ export default function MainSwiper() {
                     spaceBetween={18}
                     effect="slide"
                     speed={1200}
+                    breakpoints={{
+                        320: {
+                          slidesPerView: 1,
+                          spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                        },
+                        1440: {
+                          slidesPerView: 3,
+                        },
+                    }}
                     navigation={true}
                     pagination={{ clickable: true }} 
                     scrollbar={{ draggable: true }}
@@ -71,7 +85,7 @@ export default function MainSwiper() {
                         setIsEnd(swiper.isEnd)
                     }}
                 >
-                    <SwiperSlide >
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -101,7 +115,7 @@ export default function MainSwiper() {
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -131,7 +145,7 @@ export default function MainSwiper() {
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -160,7 +174,7 @@ export default function MainSwiper() {
                             </blockquote>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -190,7 +204,7 @@ export default function MainSwiper() {
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -220,7 +234,7 @@ export default function MainSwiper() {
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
                         <div 
                             className="max-w-[380px] max-h-[500px]
                                 bg-white rounded-[12px] 
@@ -252,10 +266,11 @@ export default function MainSwiper() {
                 </Swiper>
                 <button
                     onClick={goNext}
-                    className={`w-[68px] h-[68px] absolute flex items-center justify-center 
-                        border border-solid border-[#D1CFCF] right-[-96px] z-10 
+                    className={`w-[68px] h-[68px] absolute items-center justify-center 
+                        border border-solid border-[#D1CFCF] 2xl:right-[-96px] z-10 
                         bg-white rounded-full
                         transition-all duration-500 ease-in-out hover:scale-110
+                        hidden sm:flex sm:right-8 lg:right-4
                         ${isEnd && "opacity-55 pointer-events-none"}`}
                         aria-label="Next slide"
                 >
