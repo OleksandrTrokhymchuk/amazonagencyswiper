@@ -45,7 +45,7 @@ export default function MainSwiper() {
                         border border-solid border-[#D1CFCF] 2xl:left-[-96px] z-10 
                         bg-white rounded-full
                         transition-all duration-500 ease-in-out hover:scale-110
-                        hidden sm:flex sm:left-8 lg:left-4
+                        hidden sm:flex sm:left-8 lg:left-0
                         ${isBeginning && "opacity-55 pointer-events-none"}
                         `}
                         aria-label="Previous slide"
@@ -270,7 +270,7 @@ export default function MainSwiper() {
                         border border-solid border-[#D1CFCF] 2xl:right-[-96px] z-10 
                         bg-white rounded-full
                         transition-all duration-500 ease-in-out hover:scale-110
-                        hidden sm:flex sm:right-8 lg:right-4
+                        hidden sm:flex sm:right-8 lg:right-0
                         ${isEnd && "opacity-55 pointer-events-none"}`}
                         aria-label="Next slide"
                 >
