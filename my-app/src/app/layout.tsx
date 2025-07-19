@@ -4,7 +4,7 @@ import { Space_Grotesk, Staatliches, Spinnaker } from "next/font/google"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['500', '700'], 
+  weight: ['500', '700'],
   variable: '--font-space-grotesk',
 })
 
@@ -15,9 +15,9 @@ const staatliches = Staatliches({
 })
 
 const spinnaker = Spinnaker({
-  subsets: ['latin'], 
-  weight: ['400'],    
-  variable: '--font-spinnaker', 
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-spinnaker',
 });
 
 export const metadata: Metadata = {
