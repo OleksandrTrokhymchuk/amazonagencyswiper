@@ -64,7 +64,7 @@ export default function MainSwiper() {
                     slidesPerView={3} 
                     spaceBetween={18}
                     effect="slide"
-                    speed={1200}
+                    speed={1000}
                     breakpoints={{
                         320: {
                           slidesPerView: 1,
