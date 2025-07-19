@@ -13,22 +13,22 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  @apply hidden !important; 
+  @apply hidden !important;
 }
 
 .swiper-pagination {
-  @apply relative; 
-  @apply mt-12;     
-  @apply w-full;   
-  @apply flex;     
-  @apply justify-center; 
+  @apply relative;
+  @apply mt-12;
+  @apply w-full;
+  @apply flex;
+  @apply justify-center;
   @apply gap-3
 }
 
 .swiper-pagination-bullet {
-  @apply bg-[#bcbbbb]; 
-  @apply w-3 h-3;      
-  @apply transition-colors duration-300; 
+  @apply bg-[#bcbbbb];
+  @apply w-3 h-3;
+  @apply transition-colors duration-300;
 }
 
 .swiper-pagination-bullet-active {
